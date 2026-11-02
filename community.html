@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>In Schools &amp; Communities — Nghọta na Mmụta Asụsụ Igbo</title>
+  <meta name="description" content="Classroom reading sessions, school outreach, and community events with Mrs. Chinyere Bob-Madumere and students learning Igbo." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">
+          <img src="images/logo.jpg" alt="Nghotaigbo Logo" />
+        </span>
+        <span class="nav-logo-text">Nghotaigbo</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="stories.html">Video Contents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="community.html" class="active">In Schools</a></li>
+        <li class="mobile-only"><a href="contact.html" style="font-weight: 700; color: var(--color-primary);">Get in Touch &rarr;</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="nav-cta-btn">Get in Touch</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay"></div>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <header class="page-header">
+    <div class="container">
+      <span class="section-label">Ụmụaka na Ụlọ Akwụkwọ</span>
+      <h1 class="section-title">In Schools &amp; Communities</h1>
+      <p class="section-subtitle">
+        Bringing Asụsụ Igbo directly to the next generation through interactive classroom visits, book presentations, and cultural celebration days.
+      </p>
+    </div>
+  </header>
+
+  <div class="igbo-pattern"></div>
+
+  <!-- ==================== COMMUNITY OVERVIEW ==================== -->
+  <section class="community-section" style="background: var(--color-bg);">
+    <div class="container">
+
+      <div class="community-cards reveal">
+        <div class="community-card">
+          <div class="community-card-icon" style="background: #FDE8EF;">🏫</div>
+          <h3>Classroom Reading Visits</h3>
+          <p>
+            Visiting primary and secondary schools to read directly with pupils, lead pronunciation exercises, and share the joy of discovering Igbo words.
+          </p>
+        </div>
+
+        <div class="community-card">
+          <div class="community-card-icon" style="background: #E8F5E9;">🤝</div>
+          <h3>Educator Partnerships</h3>
+          <p>
+            Equipping teachers with engaging instructional strategies, audio-visual methods, and companion materials to make Igbo classes the highlight of the week.
+          </p>
+        </div>
+
+        <div class="community-card">
+          <div class="community-card-icon" style="background: #FFF8E1;">🌟</div>
+          <h3>Cultural Days &amp; Events</h3>
+          <p>
+            Participating in cultural presentations, book exhibitions, and youth language contests that inspire children to speak their mother tongue proudly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Photo Gallery of Outreach Moments -->
+      <div style="margin-top: 5rem;" class="reveal">
+        <div class="section-header">
+          <span class="section-label">Moments in Pictures</span>
+          <h2 class="section-title">School Visits &amp; Community Outreach</h2>
+          <p class="section-subtitle">
+            Snapshots of school visits celebrating the Igbo language with students, teachers, and community members.
+          </p>
+        </div>
+
+        <div class="school-grid" id="communityGallery">
+
+          <!-- 1. Central School, Obinọfia Ndịagụ -->
+          <div class="school-card reveal reveal-delay-1" onclick="openLightbox(0)">
+            <div class="school-card-image-wrap">
+              <img src="images/events/central-school-obinofia-ndiagu.jpg" alt="Central School, Obinọfia Ndịagụ" loading="lazy" />
+            </div>
+            <div class="school-card-content">
+              <h3 class="school-card-title">Central School</h3>
+              <p class="school-card-location">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Obinọfia Ndịagụ</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Community Primary School, Obinọfia Ndịagụ -->
+          <div class="school-card reveal reveal-delay-2" onclick="openLightbox(1)">
+            <div class="school-card-image-wrap">
+              <img src="images/events/community-primary-obinofia-ndiagu.jpg" alt="Community Primary School, Obinọfia Ndịagụ" loading="lazy" />
+            </div>
+            <div class="school-card-content">
+              <h3 class="school-card-title">Community Primary School</h3>
+              <p class="school-card-location">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Obinọfia Ndịagụ</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. Triumphant School, Obinọfia Ndịagụ -->
+          <div class="school-card reveal reveal-delay-3" onclick="openLightbox(2)">
+            <div class="school-card-image-wrap">
+              <img src="images/events/triumphant-school-obinofia-ndiagu.jpg" alt="Triumphant School, Obinọfia Ndịagụ" loading="lazy" />
+            </div>
+            <div class="school-card-content">
+              <h3 class="school-card-title">Triumphant School</h3>
+              <p class="school-card-location">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Obinọfia Ndịagụ</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. Infant Child School, Obinọfia Ndịagụ -->
+          <div class="school-card reveal reveal-delay-1" onclick="openLightbox(3)">
+            <div class="school-card-image-wrap">
+              <img src="images/events/infant-child-obinofia-ndiagu.jpg" alt="Infant Child, Obinọfia Ndịagụ" loading="lazy" />
+            </div>
+            <div class="school-card-content">
+              <h3 class="school-card-title">Infant Child</h3>
+              <p class="school-card-location">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Obinọfia Ndịagụ</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- 5. Good Foundation, Obinọfia Ndịagụ -->
+          <div class="school-card reveal reveal-delay-2" onclick="openLightbox(4)">
+            <div class="school-card-image-wrap">
+              <img src="images/events/good-foundation-obinofia-ndiagu.jpg" alt="Good Foundation, Obinọfia Ndịagụ" loading="lazy" />
+            </div>
+            <div class="school-card-content">
+              <h3 class="school-card-title">Good Foundation</h3>
+              <p class="school-card-location">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Obinọfia Ndịagụ</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- 6. Glorious Kids, Obinọfia Ndịagụ -->
+          <div class="school-card reveal reveal-delay-3" onclick="openLightbox(5)">
+            <div class="school-card-image-wrap">
+              <img src="images/events/glorious-kids-obinofia-ndiagu.jpg" alt="Glorious Kids, Obinọfia Ndịagụ" loading="lazy" />
+            </div>
+            <div class="school-card-content">
+              <h3 class="school-card-title">Glorious Kids</h3>
+              <p class="school-card-location">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Obinọfia Ndịagụ</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- 7. Community Primary School, Obinọfia Ndịụnọ -->
+          <div class="school-card reveal reveal-delay-1" onclick="openLightbox(6)">
+            <div class="school-card-image-wrap">
+              <img src="images/events/community-primary-obinofia-ndiuno.jpg" alt="Community Primary School, Obinọfia Ndịụnọ" loading="lazy" />
+            </div>
+            <div class="school-card-content">
+              <h3 class="school-card-title">Community Primary School</h3>
+              <p class="school-card-location">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Obinọfia Ndịụnọ</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Request Books & School Packages -->
+      <div style="margin-top: 5rem; background: var(--color-bg-warm); border-radius: var(--radius-lg); border: 1.5px solid var(--color-border); padding: 3rem; text-align: center;" class="reveal">
+        <span class="section-label">Order &amp; School Packages</span>
+        <h3 style="font-size: 1.45rem; margin-bottom: 0.75rem; color: var(--color-text);">Equip Your School or Home with Nghọta na Mmụta Asụsụ Igbo</h3>
+        <p style="color: var(--color-text-light); max-width: 650px; margin: 0 auto 1.75rem; font-size: 0.95rem; line-height: 1.8;">
+          Are you an educator, parent, or school administrator? We provide individual copies, classroom sets, and complete curriculum packages for Primary 1 through JSS 3.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="books.html" class="btn btn-primary">Browse the Book Collection</a>
+          <a href="contact.html?inquiry=BookPurchase" class="btn btn-outline">Request Copies &amp; Pricing</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox modal -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="Previous">&#8249;</button>
+      <img id="lightboxImage" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="Next">&#8250;</button>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <div class="igbo-pattern"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="nav-logo-icon">
+              <img src="images/logo.jpg" alt="Nghotaigbo Logo" />
+            </span>
+            Nghotaigbo
+          </a>
+          <p>
+            Nghotaigbo Educational Services — teaching Igbo through stories, literature, and school partnerships.
+          </p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="books.html">Book Collection</a></li>
+            <li><a href="stories.html">Video Contents</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="community.html">In Schools</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Listen &amp; Learn</h4>
+          <ul class="footer-links">
+            <li><a href="stories.html">Folklore &amp; Fables</a></li>
+            <li><a href="stories.html">Children's Rhymes</a></li>
+            <li><a href="stories.html">Pronunciation Lessons</a></li>
+          </ul>
+          <a href="http://www.youtube.com/@nghotaigbo7919" target="_blank" rel="noopener" class="footer-yt-btn" aria-label="Visit YouTube Channel @nghotaigbo7919">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span>@nghotaigbo7919</span>
+          </a>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Asụsụ Igbo Amaka!</h4>
+          <p>Interested in textbook packages for your school? Call <strong>08035081650</strong> or request below.</p>
+          <a href="contact.html?inquiry=BookPurchase" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">
+            Request Books
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Nghotaigbo Educational Services. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+
