@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Video Filter Tabs (for Stories/Rhymes page) ---------- */
   const videoTabs = document.querySelectorAll('.video-tab-btn');
   const videoCards = document.querySelectorAll('.video-card[data-category]');
+  const videoGrid = document.querySelector('.video-grid');
 
   videoTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -164,6 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
 
       const filter = tab.dataset.filter;
+      if (videoGrid) {
+        videoGrid.setAttribute('data-active-filter', filter);
+      }
       videoCards.forEach(card => {
         if (filter === 'all' || card.dataset.category === filter) {
           card.style.display = '';
