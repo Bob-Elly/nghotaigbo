@@ -66,29 +66,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav-links');
   const mobileOverlay = document.querySelector('.mobile-overlay');
 
+  function closeMobileNav() {
+    if (!hamburger || !navLinks) return;
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    if (mobileOverlay) mobileOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
   function toggleMobileNav() {
     if (!hamburger || !navLinks) return;
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-    if (mobileOverlay) mobileOverlay.classList.toggle('active');
-    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    const willOpen = !navLinks.classList.contains('active');
+    hamburger.classList.toggle('active', willOpen);
+    navLinks.classList.toggle('active', willOpen);
+    if (mobileOverlay) mobileOverlay.classList.toggle('active', willOpen);
+    document.body.style.overflow = willOpen ? 'hidden' : '';
   }
 
   if (hamburger) {
-    hamburger.addEventListener('click', toggleMobileNav);
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileNav();
+    });
   }
 
   if (mobileOverlay) {
-    mobileOverlay.addEventListener('click', toggleMobileNav);
+    mobileOverlay.addEventListener('click', closeMobileNav);
   }
 
-  // Close mobile nav when clicking a link
+  // Close mobile nav when clicking any nav link
   document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (navLinks && navLinks.classList.contains('active')) {
-        toggleMobileNav();
-      }
-    });
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  // Close mobile nav on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
+      closeMobileNav();
+    }
   });
 
   /* ---------- Scroll Reveal Animations ---------- */

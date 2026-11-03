@@ -641,9 +641,13 @@ a.btn-white:hover {
   background: rgba(0,0,0,0.5);
   z-index: 998;
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--transition);
 }
-.mobile-overlay.active { opacity: 1; }
+.mobile-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* ---------- Hero Section ---------- */
 .hero {
@@ -2317,10 +2321,16 @@ a.btn-white:hover {
     padding: 5rem 1.75rem 2rem;
     gap: 0.5rem;
     box-shadow: var(--shadow-xl);
-    transition: right var(--transition);
+    transition: right var(--transition), visibility var(--transition);
     z-index: 999;
+    visibility: hidden;
+    pointer-events: none;
   }
-  .nav-links.active { right: 0; }
+  .nav-links.active {
+    right: 0;
+    visibility: visible;
+    pointer-events: auto;
+  }
   .nav-links li { width: 100%; }
   .nav-links a {
     display: block;
@@ -2330,8 +2340,14 @@ a.btn-white:hover {
     border-bottom: 1px solid var(--color-border);
   }
 
-  .mobile-overlay { display: block; }
-  .mobile-overlay.active { z-index: 998; }
+  .mobile-overlay {
+    display: block;
+    pointer-events: none;
+  }
+  .mobile-overlay.active {
+    z-index: 998;
+    pointer-events: auto;
+  }
 
   .nav-cta-btn {
     display: none; /* Accessible in the mobile nav */
